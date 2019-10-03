@@ -1,0 +1,154 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cek Profesi</title>
+    {% include "snippets/style.html" %}
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <style type="text/css">
+        .bagi{
+            display: grid;
+            grid-template-columns: 70% 30%; 
+        }
+        .matkul{
+            display: grid;
+            grid-template-columns: 50% 50%; 
+        }
+
+        .bagi1{
+            display: grid;
+            grid-template-columns: 70% 30%; 
+        }
+        .kursus{
+            display: grid;
+            grid-template-columns: 50% 50%; 
+        }
+         .parallax{
+        background-image: url("../static/img/3333.jpg");
+        min-height: 300px; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 30px;
+        width: 100%;
+      }
+      .btn{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      body{
+         background: radial-gradient(red, white, blue); /* Standard syntax */
+         background: -webkit-radial-gradient(red, white, blue); /* Safari 5.1 to 6.0 */
+         background: -o-radial-gradient(red, white, blue); /* For Opera 11.6 to 12.0 */
+         background: -moz-radial-gradient(red, white, blue);
+      }
+    </style>
+  
+</head>
+<body>
+   <div class="card container">
+     <div id="menu-nav">
+            <div id="navigation-bar">
+              <ul>
+                <li><a href="/"><i class="fa fa-home"></i><span>Beranda</span></a></li>
+                <li><a href="/ProgramStudi"  data-toggle="tooltip" title="Matakuliah dan Kursus"><i class="fa fa-book"></i><span>Program Studi</span></a></li>
+                <li><a href="/Profesi" data-toggle="tooltip" title="Cek profesi disini"><i class="fa fa-briefcase" ></i><span>Profesi</span></a></li>
+                <li><a href="/Bantuan"><i class="fa fa-question"></i><span>Bantuan</span></a></li>
+                <li><a href="/admin" target="_blank" data-toggle="tooltip" title="Login Jurusan"><i class="fa fa-user"></i><span>Login</span></a></li>
+              </ul>
+            </div>
+        </div>
+    <div class="parallax">
+       
+
+      <h2 style="padding-bottom: 60px; text-align: center">PROFESI : </h2>
+            <form method="POST"  class="container">
+                {% csrf_token %}
+               <!--  {{form}} -->
+                    <select name='name_profesi' id="name_profesi" class="form-control" style="width: 35%; margin :0 auto;" required="Profesi Belum di pilih" >
+                        <option >Silahkan Pilih Profesi</option>
+                        {% for p in Profesis %}
+                       
+                        <option >{{ p.profesi }}</option>
+                        {% endfor %}
+                    </select> <br>
+                    <button type="submit" class="btn btn-info " >CEK</button>
+            </form>
+            <br>
+      </div>
+    
+   <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link " href="/Profesi"><h3>Profesi</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/Cekprofesi"><h3>Cek Profesi</h3></a>
+      </li>
+    </ul>
+   
+        
+    <div style=" padding-top: 100px;">
+            <p>{{pesan}}</p>
+            <h3>MATAKULIAH YANG BERHUBUNGAN DENGAN PROFESI</h3>
+            <h3>{{Profesis1}}</h3>
+            
+            <table class="table table-bordered table-striped table-light " >
+              <thead class="thead-dark text-center">
+                <tr>
+                  <th scope="col">NO</th>
+                  <th scope="col">MATAKULIAH</th>
+                  <th scope="col" >PRESENTASE</th> 
+                  <th scope="col">KATA SAMA</th> 
+                 </tr>
+              </thead>
+              <tbody>
+                {% for p_matkul in profmatkuls %}
+                <tr>
+                    <td scope="row" >{{forloop.counter}}</td>
+                    <td >{{p_matkul.matkul}}</td>
+                    <td>{{p_matkul.presentase}}</td>
+                    <td>{{p_matkul.katasama}}</td>
+                </tr>
+                {% endfor %}            
+              </tbody>
+            </table>
+        </div>
+       <div style="padding-top: 100px;">
+            <h3>KURSUS YANG BERHUBUNGAN DENGAN PROFESI</h3>
+            <h3>{{Profesis1}}</h3>
+            <table class="table table-bordered table-striped table-light ">
+              <thead class="thead-dark text-center" >
+                <tr>
+                    <th scope="col">NO</th>
+                    <th scope="col">KURSUS</th>
+                    <th scope="col">PRESENTASE</th>  
+                    <th scope="col">KATA SAMA</th>  
+                </tr>
+              </thead>
+              <tbody>
+                
+                {% for p_matkur in profkursuss %}
+                <tr>
+                    <td scope="row">{{forloop.counter}}</td>
+                    <td>{{p_matkur.kursus}}</td>
+                    <td>{{p_matkur.presentase}}</td>
+                    <td>{{p_matkur.katasama}}</td>
+                </tr>
+                {% endfor %}            
+              </tbody>
+            </table>
+        </div>
+      </div>
+        <br>
+{% include "snippets/scripts.html" %}
+
+
+</body>
+</html>
