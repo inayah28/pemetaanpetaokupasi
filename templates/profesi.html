@@ -1,0 +1,180 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profesi</title>
+    {% include "snippets/style.html" %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <style type="text/css">
+      .carousel-inner{
+        width:100%;
+        max-height: 500px !important;
+      }
+      .navbar-toggler-icon{
+          background-image: url(humberger.png);
+      }
+      body{
+         background: radial-gradient(red, white, blue); /* Standard syntax */
+         background: -webkit-radial-gradient(red, white, blue); /* Safari 5.1 to 6.0 */
+         background: -o-radial-gradient(red, white, blue); /* For Opera 11.6 to 12.0 */
+         background: -moz-radial-gradient(red, white, blue);
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="card container" >
+       {% include "snippets/navbar.html" %}
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link " href="/Profesi"><h3>Profesi</h3></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/Cekprofesi"><h3>Cek Profesi</h3></a>
+          </li>
+        </ul>
+        <br>
+      <h4 class="container">AREA FUNGSI TEKNOLOGI INFORMASI DAN KOMUNIKASI</h4>
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Pengembangan Perangkat Lunak dan Pemrograman</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam merancang, mendesain, mengkonfigurasi, dan membuat perangkat lunak (software) maupun aplikasi yang dijalankan/dioperasikan dalam lingkungan komputer, piranti digital, maupun jaringan. Spektrum kemampuan ini berhubungan erat dengan metodologi atau life cycle pembuatan perangkat lunak, yaitu: perencanaan, perancangan, pemrograman, pengujian, perbaikan, penerapan, dan penilaian. Disamping itu, aspek ini berkaitan pula dengan kemampuan seorang individu dalam membuat atau mengembangkan program komputer yang dapat dijalankan dalam berbagai lingkungan komputasi (standalone maupun network), baik menggunakan bahasa tingkat rendah (low level language) hingga tingkat tinggi (high level language) – baik yang bersifat terbuka (open source) maupun tertutup (proprietary).</p>
+      <ul class="list-group">
+        <li class="list-group-item">LEAD PROGRAMMER</li>
+        <li class="list-group-item">PROGRAM ANALYST</li>
+        <li class="list-group-item">OBJECT PROGRAMMER</li>
+        <li class="list-group-item">DATABASE PROGRAMMER</li>
+        <li class="list-group-item">WEB DEVELOPER</li>
+      </ul>
+      </div>
+    </div>
+    <div class="card container" >
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Infrastruktur dan Jaringan</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam merancang, membangun, mengoperasikan, dan mengawasi berbagai komponen teknis jaringan infrastruktur dan telekomunikasi. Yang dimaksud dengan infrastruktur telekomunikasi di sini adalah medium transmisi atau koneksi berbasis digital/elektronik, yang beroperasi melalui darat (terestrial), laut (kabel laut), maupun udara (satelit). </p>
+        <ul class="list-group">
+        <li class="list-group-item">NETWORK ADMINISTRATOR</li>
+        <li class="list-group-item">SYSTEM ADMINISTRATOR</li>
+        <li class="list-group-item">NETWORK DESIGNER</li>
+        <li class="list-group-item">NETWORK ADMINISTRATOR MADYA</li>
+        <li class="list-group-item">TEKNISI MADYA JARINGAN KOMPUTER </li>
+      </ul>
+      </div>
+    </div>
+    <div class="card container" >
+     <!--  <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Sistem Operasi dan Aplikasi Pendukung</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam mengembangkan, menginstalasi, mengkonfigurasi, menggunakan, dan memelihara sistem operasi komputer – baik untuk sistem mandiri (stand-alone) maupun dalam bentuk jaringan (network). Sistem operasi yang dimaksud melingkupi berbagai jenis baik yang bersifat terbuka (open source) maupun tertutup (proprietary).</p>
+        <ul class="list-group">
+        <li class="list-group-item">TEKNISI KOMPUTER SPESIALIS SENIOR</li>
+        
+      </ul>
+      </div>
+    </div>
+ 
+    <div class="card container" >
+     <!--  <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Manajemen Proyek Teknologi Informasi</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam hal merencanakan, mempersiapkan, menjalankan, mengelola, menilai, mengawasi, dan mengendalikan aktivitas proyek sistem dan teknologi informasi. Adapun fokus utamanya adalah pada manajemen ruang lingkup, kualitas, waktu, biaya, risiko, komunikasi, pengadaan, sumber daya manusia, pemangku kepentingan, dan integrasi.   </p>
+        <ul class="list-group">
+        <li class="list-group-item">ICTPM DEPUTY MANAGER</li>
+        <li class="list-group-item">DEPUTY MANAGER ICT PROJECT MANAGEMENT</li>
+      </ul>
+      </div>
+    </div>
+     <div class="card container" >
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Arsitektur Teknologi Informasi Korporasi</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam hal merencanakan, merancang, mendesain, menerapkan/mengimplementasikan, mengkaji, mereviu, menilai, mengelola, dan mengendalikan arsitektur enterprise beserta sub-sistem pembentuknya. Adapun sub-sistem pembentuknya berupa arsitektur bisnis (proses), arsitektur aplikasi, arsitektur informasi, arsitektur teknologi, arsitektur organisasi, dan arsitektur kebijakan (policy). </p>
+        <ul class="list-group">
+        <li class="list-group-item">ENTERPRISE ARCHITECT</li>
+      </ul>
+      </div>
+    </div>
+     <div class="card container" >
+     <!--  <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Keamanan Teknologi Informasi dan Kepatuhan</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam hal merencanakan, merancang, membangun, menerapkan, mengelola, menilai, mengukur, dan mengendalikan sistem keamanan data, informasi, sistem, dan/atau internet. Spektrum ruang lingkup kapabilitas ini bervariasi dari yang sangat konseptual hingga teknis, dan mulai dari yang teoritis hingga terapan. Disamping itu, aspek ini berkaitan pula dengan kemampuan organisasi dalam memenuhi atau mematuhi beragam peraturan/regulasi teknis di bidang keamanan informasi.</p>
+        <ul class="list-group">
+        <li class="list-group-item">CYBER SECURITY ANALYST</li>
+        <li class="list-group-item">IT AUDITOR</li>
+        <li class="list-group-item">AUDITOR MADYA TEKNOLOGI INFORMASI </li>
+        <li class="list-group-item">NETWORK ADMINISTRATOR MADYA</li>
+        <li class="list-group-item">TEKNISI MADYA JARINGAN KOMPUTER </li>
+      </ul>
+      </div>
+    </div>
+  
+    <div class="card container" >
+     <!--  <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Sistem Manajemen Fasilitas Teknologi Informasi</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam hal merencanakan, merancang, mendesain, membangun, menjalankan/menerapkan/mengimplementasikan, mengelola, dan mengendalikan beragam fasilitas, sarana prasarana, dan teknologi pendukung sistem informasi. Fasilitas maupun sarana prasarana dimaksud antara lain: data center, call center, disaster recovery center, server room, cloud computing facilities, dan lain sebagainya.</p>
+        <ul class="list-group">
+        <li class="list-group-item">TEKNISI PUSAT DATA MADYA</li>
+        
+      </ul>
+      </div>
+    </div>
+    <div class="card container" >
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Multimedia</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam merancang, membuat, mengembangkan, dan menerapkan aplikasi dan/atau konten berbasis multimedia dalam platform antarmuka (user interface) yang beragam. Multimedia merupakan representasi digital dalam berbagai format media seperti: teks, gambar/citra/grafis, suara/audio, film/video, atau kombinasi di antaranya. Beragam media ini dikembangkan untuk kebutuhan pengguna yang menginginkan adanya model navigasi aplikasi (input maupun output) yang menarik, mudah digunakan (user friendly), dan ergonomis </p>
+        <ul class="list-group">
+       
+        <li class="list-group-item">DESAINER MULTIMEDIA UTAM</li>
+        <li class="list-group-item">ANIMATOR UTAMA </li>
+        <li class="list-group-item">DESAINER GRAFIS MADYA</li>
+        <li class="list-group-item">EDITOR VIDEO</li>
+      </ul>
+      </div>
+    </div>
+    <div class="card container" >
+     <!--  <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Teknologi Mobile dan Internet-Of-Things</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam merancang, membuat, mengembangkan, mengkonfigurasi, menerapkan, dan mengendalikan teknologi yang berhubungan dengan kanal akses (access channels atau distribution channels). Belakangan ini telah dikenal sejumlah teknologi kanal akses yang dikenal masyarakat seperti: ATM, kios, TV digital, tablet, smart phone, gadget, kamera, dan lain sebagainya – baik yang berdiri sendiri maupun yang telah dirakit (embedded) dalam entitas lain seperti: mobil, pesawat, kereta api, motor, mesin cuci, lemari es, dan lain sebagainya (internet-of-things). </p>
+        <ul class="list-group">
+        
+        <li class="list-group-item">PENGEMBANG CLOUD COMPUTING</li>
+        <li class="list-group-item">MOBILE COMPUTING UTAMA</li>
+      </ul>
+      </div>
+    </div>
+    <div class="card container" >
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Sistem Informasi Terintegrasi</h5>
+        <p class="card-text">Aspek ini berkaitan dengan kemampuan seorang individu dalam merencanakan, merancang, membangun, menerapkan, mengendalikan, dan mengembangkan sistem informasi terintegrasi dan terpadu yang di dalamnya terdiri dari berbagai komponen penting berupa komponen teknologi, proses, dan manusia. Ruang lingkup yang ditangani sangatlah luas, mulai yang bersifat strategis hingga teknis – termasuk di dalamnya isu-isu penting seperti: manajemen perubahan, dinamika sosial,strategi implementasi, dan lain sebagainya. </p>
+        <ul class="list-group">
+       
+        <li class="list-group-item">ERP ANALYST </li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="card container" >
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Konsultasi dan Layanan Jasa SDM Teknologi Informasi</h5>
+        <p class="card-text">Aspek ini berkaitan erat dengan kemampuan seorang individu dalam memberikan beragam jasa layanan terkait dengan teknologi informasi, seperti konsultasi, pendampingan, pelatihan, penelitian, dan lain sebagainya. Termasuk di dalamnya mereka yang ingin menekuni bidang digital entrepreneurship.</p>
+        <ul class="list-group">
+        
+        <li class="list-group-item">DIGITAL ENTERPRENEUR DEPUTY MANAGER</li>
+      </ul>
+      </div>
+    </div>
+
+
+
+
+    {% include "snippets/scripts.html" %}
+</body>
+</html>

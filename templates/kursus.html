@@ -1,0 +1,273 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program Studi</title>
+    {% include "snippets/style.html" %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <style type="text/css">
+      .carousel-inner{
+        width:100%;
+        max-height: 500px !important;
+      }
+      .navbar-toggler-icon{
+          background-image: url(humberger.png);
+      }
+      
+      .matkul{
+            display: grid;
+            grid-template-columns: 30% 30% 30%; 
+      }
+      
+      .kursus{
+            display: grid;
+            grid-template-columns: 30% 30% 30%; 
+      }
+      body{
+         background: radial-gradient(red, white, blue); /* Standard syntax */
+         background: -webkit-radial-gradient(red, white, blue); /* Safari 5.1 to 6.0 */
+         background: -o-radial-gradient(red, white, blue); /* For Opera 11.6 to 12.0 */
+         background: -moz-radial-gradient(red, white, blue);
+      }
+    </style>
+</head>
+<body>
+   <div class="card container">
+    {% include "snippets/navbar.html" %}
+    <!--  <ul class="nav nav-tabs" >
+      <li class="nav-item">
+        <a class="nav-link " href="/ProgramStudi/Matkul"><h3>Matakuliah</h3></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/ProgramStudi/Kursus"><h3>Kursus Lepkom</h3></a>
+      </li>
+    </ul> -->
+    <br>
+    <h3 class="text-center">MATAKULIAH TEKNIK INFORMATIKA</h3>
+    <br>
+    <div style="padding-left: 35px;" class="bagi">
+      <div class="matkul">
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 1</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters1 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 2</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters2 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 3</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters3 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 4</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters4 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 5</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters5 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 6</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters6 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 7</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters7 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 8</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Semesters8 %}
+                    <tr>
+                        <td>{{post.matkul}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+       <!--  <div >
+          <div class="card border-warning" style="width: 18rem;" >
+            <div class="card-header">
+              Category
+            </div>
+            <ul class="list-group list-group-flush">
+              <a href=""><li class="list-group-item">PROFESI</li></a>
+              <a href="/homematkul/"><li class="list-group-item">MATA KULIAH</li></a>
+              <a href=""><li class="list-group-item">KURSUS LEPKOM</li></a>
+            </ul>
+          </div>
+        </div> -->
+    </div>
+    <br>
+    <h3 class="text-center">KURSUS LEPKOM TEKNIK INFORMATIKA</h3>
+    <br>
+    <div style="padding-left: 35px;" class="bagi1">
+      <div class="kursus">
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 1</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Kursusz1 %}
+                    <tr>
+                        <td>{{post.kursus}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 2</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Kursusz2 %}
+                    <tr>
+                        <td>{{post.kursus}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 3</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Kursusz3 %}
+                    <tr>
+                        <td>{{post.kursus}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 4</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Kursusz4 %}
+                    <tr>
+                        <td>{{post.kursus}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 5</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Kursusz5 %}
+                    <tr>
+                        <td>{{post.kursus}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card border-primary mb-3" style="max-width: 30rem;">
+          <div class="card-header">Semester 6</div>
+          <div class="card-body text-primary">
+            <table>
+                <tbody>
+                    {% for post in Kursusz6 %}
+                    <tr>
+                        <td>{{post.kursus}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+
+    
+{% include "snippets/scripts.html" %}
+</body>
+</html>

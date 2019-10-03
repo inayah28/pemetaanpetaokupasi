@@ -1,0 +1,63 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bantuan</title>
+    {% include "snippets/style.html" %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+    <style type="text/css">
+        /*body{
+            padding-top: 100px;
+            position: relative;
+        }*/
+      body{
+         background: radial-gradient(grey, white, blue); /* Standard syntax */
+         background: -webkit-radial-gradient(grey, white, blue); /* Safari 5.1 to 6.0 */
+         background: -o-radial-gradient(grey, white, blue); /* For Opera 11.6 to 12.0 */
+         background: -moz-radial-gradient(grey, white, blue);
+      }
+        
+    </style>
+</head>
+<body>
+  <div class="card container">
+      {% include "snippets/navbar.html" %}
+      <br>
+     <div class="container" >
+         <div class="media">
+          <img src="{% static 'img/images.jpg' %}" class="mr-3" style="height: 400px;">
+          <div class="media-body">
+            <h5 class="mt-0">PPO(Pemetaan Peta OKupasi)  itu apa?</h5>
+            PPO(Pemetaan Peta OKupasi) adalah Sistem Pemetaan Peta Okupasi Bidang KKNI yang digunakan untuk kebutuhan program studi mahasiswa jurusan Teknik Informatika, yang nantinya akan dipelajari lebih dalam untuk menuju profesi yang diinginkan.
+            Sistem ini menggunakan metode Jaccard Similarity untuk menghitung kecocokan antar dataset. yaitu dataset matakuliah dengan dataset profesi yang dipilih, dan dataset kursus dengan dataset profesi yang dipilih.
+          </div>
+        </div>
+        <hr>
+        <div class="media">
+          <img src="{% static 'img/bagaimana1.jpg' %}" class="mr-3" style="height: 400px;">
+          <div class="media-body">
+            <h5 class="mt-0">Bagaimana cara menjalankan PPO?</h5>
+            Untuk menjalankan PPO
+            <ul>
+                <li>Akses PPO pada browser, kemudian akan tampil halaman awal yaitu halaman Beranda</li>
+                <li>Arahkan kursor pada menu di bagian navigasi bar, pilih menu profesi </li>
+                <li>Pada halaman profesi, plih menu Cek profesi </li>
+                <li>Akan tampil selection pilihan profesi, pilih profesi yang diinginkan</li>
+                <li>Klik tombol cek, dan akan menampilkan matakuliah dan kursus yang berhubungan dengan profesi yang dipilih</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="media">
+          <img src="{% static 'img/tampilan.png' %}" class="mr-3" style="height: 470px;">
+          <div class="media-body">
+            <h5 class="mt-0">Bagaimana keluaran yang ditampilkan </h5>
+           Keluaran yang ditampilkan adalah matakuliah dan kursus yang berhubungan dengan profesi yang dipilih
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
